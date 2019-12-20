@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
- 
-class App extends React.Component {
+
+//extends component meaning we are creating a new component. 
+class App extends Component {
+  //use render then return what you want to render
   render() {
     return (
       <div className="App">
@@ -24,5 +26,7 @@ class App extends React.Component {
     );
   }
 }
- 
+
+// you have to export or else nothing will be available to other apps to use. export default means that in this file were only exporting 1 thing (app).
+
 export default App;
