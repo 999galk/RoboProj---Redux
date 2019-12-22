@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import CardList from './CardList';
+import CardList from '../components/CardList';
 //import { robots } from './robots'; --> this is what we would use if we wanted to use a static file in our library
-import SearchBox from './SearchBox';
-import Scroll from './Scroll';
+import SearchBox from '../components/SearchBox';
+import Scroll from '../components/Scroll';
 import './App.css';
 
 /*const state = {
@@ -37,8 +37,9 @@ class App extends Component{
 	}
 	
 	render(){
-		const filteredRobots = this.state.robots.filter(robots => {
-			return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+		const { robots, searchfield } = this.state;
+		const filteredRobots = robots.filter(robot => {
+			return robot.name.toLowerCase().includes(searchfield.toLowerCase());
 		})
 		return (
 		<div className='tc'>
