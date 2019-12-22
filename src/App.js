@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardList from './CardList';
 //import { robots } from './robots'; --> this is what we would use if we wanted to use a static file in our library
 import SearchBox from './SearchBox';
+import Scroll from './Scroll';
 import './App.css';
 
 /*const state = {
@@ -43,7 +44,9 @@ class App extends Component{
 		<div className='tc'>
 			<h1 className='f2'>Robofriends</h1>
 			<SearchBox searchChange={this.OnSearchChange}/>
-			<CardList robots={filteredRobots}/>
+			<Scroll>
+				<CardList robots={filteredRobots}/>
+			</Scroll>
 		</div>
 		);
 	}
