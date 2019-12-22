@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 //import { robots } from './robots'; --> this is what we would use if we wanted to use a static file in our library
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
+import ErrorBoundary from '../components/ErrorBoundary';
 import './App.css';
 
 /*const state = {
@@ -46,7 +47,9 @@ class App extends Component{
 			<h1 className='f2'>Robofriends</h1>
 			<SearchBox searchChange={this.OnSearchChange}/>
 			<Scroll>
-				<CardList robots={filteredRobots}/>
+				<ErrorBoundary>
+					<CardList robots={filteredRobots}/>
+				</ErrorBoundary>
 			</Scroll>
 		</div>
 		);

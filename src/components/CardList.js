@@ -3,7 +3,11 @@ import Card from './Card';
 
 const CradList = ({ robots }) =>{
 	//when we loop thruogh an array or list we need to remember to add the 'key' so react will know how to differentiate the different objects once you change something
-	
+	/*
+	if(true){
+		throw new Error('NOOOOOOO!');
+	}
+	*/
 	return (
 		<div>
 		{ 	
