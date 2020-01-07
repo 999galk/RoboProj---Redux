@@ -62,6 +62,7 @@ class App extends Component{
 		(
 		<div className='tc'>
 			<h1 className='f2'>Robofriends</h1>
+			<a href='https://www.google.co.il/maps/search/bar/'>maps</a>
 			<SearchBox searchChange={OnSearchChange}/>
 			<Scroll>
 				<ErrorBoundary>
